@@ -624,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
     auctionButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = 'auction-details.html';
+            window.location.href = 'pages/auction-details.html';
         });
     });
     
