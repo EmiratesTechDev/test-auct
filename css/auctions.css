@@ -1,0 +1,299 @@
+/* Auctions Pages Styles */
+.page-header {
+    padding: 40px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.page-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-light);
+}
+
+/* Search and Filters */
+.search-filters {
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 15px;
+}
+
+.search-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.search-input-group {
+    display: flex;
+    position: relative;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 15px;
+    padding-left: 45px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    color: var(--primary-color);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 12px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.filter-select,
+.filter-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 12px;
+    background-color: white;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+}
+
+.range-separator {
+    margin: 0 5px;
+    color: var(--text-light);
+}
+
+.filter-btn,
+.reset-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.date-input {
+    padding: 7px 10px;
+}
+
+/* Results Section */
+.auction-results {
+    padding: 20px 0 40px;
+}
+
+.results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.results-count {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.results-count span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.view-options {
+    display: flex;
+    gap: 10px;
+}
+
+.view-option {
+    background: none;
+    border: 1px solid var(--border-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view-option:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.view-option.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.page-number,
+.page-prev,
+.page-next {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-light);
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.page-number:hover,
+.page-prev:hover,
+.page-next:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.page-number.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.page-dots {
+    color: var(--text-light);
+    margin: 0 5px;
+}
+
+/* Upcoming Auctions Specific Styles */
+.upcoming .auction-badge {
+    background-color: var(--secondary-color);
+}
+
+.upcoming .auction-badge.featured {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.notification-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.notification-btn i {
+    transition: transform 0.3s ease;
+}
+
+.notification-btn:hover i {
+    transform: scale(1.2);
+}
+
+.start-time {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+}
+
+.start-time i {
+    color: var(--secondary-color);
+    margin-left: 5px;
+}
+
+.start-date {
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .filters {
+        gap: 10px;
+    }
+    
+    .filter-group {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-btn,
+    .reset-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .results-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .view-options {
+        align-self: flex-end;
+    }
+}

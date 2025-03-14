@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي | موقع المزادات</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>مزادات<span>أونلاين</span></h1>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="../pages/current-auctions.html">المزادات الحالية</a></li>
+                    <li><a href="../pages/upcoming-auctions.html">المزادات القادمة</a></li>
+                    <li><a href="../pages/how-to-participate.html">كيفية المشاركة</a></li>
+                    <li><a href="../pages/contact-us.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" id="logout-btn" class="btn btn-outline"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="40" fill="#e0e0e0"/>
+                            <circle cx="40" cy="30" r="12" fill="#bdbdbd"/>
+                            <path d="M40 45 C 28 45 16 55 16 70 L 64 70 C 64 55 52 45 40 45 Z" fill="#bdbdbd"/>
+                        </svg>
+                    </div>
+                    <div class="profile-details">
+                        <h1>أحمد محمد</h1>
+                        <div class="profile-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> الرياض، السعودية</span>
+                            <span><i class="fas fa-calendar-alt"></i> عضو منذ ديسمبر 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">مزادات فائزة</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">28</div>
+                        <div class="stat-label">مزادات نشطة</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">47</div>
+                        <div class="stat-label">مزايدة</div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-plus"></i> إضافة رصيد</a>
+                    <a href="#" class="btn btn-outline"><i class="fas fa-cog"></i> تعديل الملف الشخصي</a>
+                </div>
+            </div>
+            
+            <div class="profile-tabs">
+                <div class="tabs-header">
+                    <button class="profile-tab-btn active" data-tab="my-auctions">مزاداتي</button>
+                    <button class="profile-tab-btn" data-tab="account-tab">الرصيد والمعاملات</button>
+                    <button class="profile-tab-btn" data-tab="settings-tab">إعدادات الحساب</button>
+                </div>
+                
+                <div class="profile-tab-content">
+                    <!-- My Auctions Tab -->
+                    <div class="profile-tab-pane active" id="my-auctions">
+                        <div class="my-auctions">
+                            <div class="auction-card">
+                                <div class="auction-status-badge status-winning">أنت الرابح حالياً</div>
+                                <div class="auction-image">
+                                    <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="300" height="200" fill="#f9f9f9"/>
+                                        <rect x="75" y="50" width="150" height="100" rx="5" fill="#ddd"/>
+                                        <rect x="100" y="75" width="100" height="50" rx="2" fill="#ccc"/>
+                                        <circle cx="125" cy="100" r="10" fill="#bbb"/>
+                                    </svg>
+                                </div>
+                                <div class="auction-info">
+                                    <h3>ساعة ذكية فاخرة - الإصدار الحديث</h3>
+                                    <div class="auction-meta">
+                                        <div class="current-bid">
+                                            <span class="label">السعر الحالي:</span>
+                                            <span class="value">١٥٠٠ ريال</span>
+                                        </div>
+                                        <div class="time-left">
+                                            <i class="far fa-clock"></i>
+                                            <span class="countdown" data-time="2023-12-31T23:59:59">٣٦:١٢:٠٥</span>
+                                        </div>
+                                    </div>
+                                    <div class="bid-amount-indicator">
+                                        <span>مزايدتك:</span>
+                                        <span class="your-bid">١٥٠٠ ريال</span>
+                                    </div>
+                                    <div class="auction-actions">
+                                        <a href="auction-details.html" class="btn btn-primary btn-full">متابعة المزاد</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="auction-card">
+                                <div class="auction-status-badge status-outbid">تم تجاوز مزايدتك</div>
+                                <div class="auction-image">
+                                    <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="300" height="200" fill="#f9f9f9"/>
+                                        <rect x="50" y="40" width="200" height="120" rx="0" fill="#ddd"/>
+                                        <rect x="70" y="60" width="160" height="80" rx="0" fill="#ccc"/>
+                                        <path d="M120 100 L180 100" stroke="#bbb" stroke-width="8"/>
+                                        <path d="M150 70 L150 130" stroke="#bbb" stroke-width="8"/>
+                                    </svg>
+                                </div>
+                                <div class="auction-info">
+                                    <h3>جهاز تلفزيون ذكي - ٦٥ بوصة</h3>
+                                    <div class="auction-meta">
+                                        <div class="current-bid">
+                                            <span class="label">السعر الحالي:</span>
+                                            <span class="value">٣٢٠٠ ريال</span>
+                                        </div>
+                                        <div class="time-left">
+                                            <i class="far fa-clock"></i>
+                                            <span class="countdown" data-time="2023-12-29T18:30:00">١٠:٢٥:٤٠</span>
+                                        </div>
+                                    </div>
+                                    <div class="bid-amount-indicator">
+                                        <span>مزايدتك:</span>
+                                        <span class="your-bid">٣١٠٠ ريال</span>
+                                    </div>
+                                    <div class="auction-actions">
+                                        <a href="auction-details.html" class="btn btn-primary btn-full">زيادة المزايدة</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="auction-card">
+                                <div class="auction-status-badge status-watching">قيد المتابعة</div>
+                                <div class="auction-image">
+                                    <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="300" height="200" fill="#f9f9f9"/>
+                                        <circle cx="150" cy="100" r="70" fill="#ddd"/>
+                                        <circle cx="150" cy="100" r="50" fill="#ccc"/>
+                                        <circle cx="150" cy="100" r="30" fill="#bbb"/>
+                                    </svg>
+                                </div>
+                                <div class="auction-info">
+                                    <h3>كاميرا احترافية مع عدسات</h3>
+                                    <div class="auction-meta">
+                                        <div class="current-bid">
+                                            <span class="label">السعر الحالي:</span>
+                                            <span class="value">٢٨٠٠ ريال</span>
+                                        </div>
+                                        <div class="time-left">
+                                            <i class="far fa-clock"></i>
+                                            <span class="countdown" data-time="2024-01-02T20:15:00">٢ أيام</span>
+                                        </div>
+                                    </div>
+                                    <div class="auction-actions">
+                                        <a href="auction-details.html" class="btn btn-primary btn-full">المزايدة الآن</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="auction-card">
+                                <div class="auction-status-badge status-winning">أنت الرابح حالياً</div>
+                                <div class="auction-image">
+                                    <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="300" height="200" fill="#f9f9f9"/>
+                                        <rect x="90" y="50" width="120" height="100" rx="10" fill="#ddd"/>
+                                        <rect x="105" y="65" width="90" height="40" rx="5" fill="#ccc"/>
+                                        <rect x="110" y="115" width="80" height="25" rx="5" fill="#bbb"/>
+                                    </svg>
+                                </div>
+                                <div class="auction-info">
+                                    <h3>حاسب محمول - معالج متطور</h3>
+                                    <div class="auction-meta">
+                                        <div class="current-bid">
+                                            <span class="label">السعر الحالي:</span>
+                                            <span class="value">٤٨٠٠ ريال</span>
+                                        </div>
+                                        <div class="time-left">
+                                            <i class="far fa-clock"></i>
+                                            <span class="countdown" data-time="2024-01-05T12:00:00">٤ أيام</span>
+                                        </div>
+                                    </div>
+                                    <div class="bid-amount-indicator">
+                                        <span>مزايدتك:</span>
+                                        <span class="your-bid">٤٨٠٠ ريال</span>
+                                    </div>
+                                    <div class="auction-actions">
+                                        <a href="auction-details.html" class="btn btn-primary btn-full">متابعة المزاد</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Tab -->
+                    <div class="profile-tab-pane" id="account-tab">
+                        <div class="account-balance">
+                            <div class="balance-header">
+                                <h2>رصيدك الحالي</h2>
+                                <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-plus"></i> إضافة رصيد</a>
+                            </div>
+                            <div class="balance-amount">١٢,٥٠٠ ريال</div>
+                            <p>يمكنك استخدام رصيدك في المزايدة على المنتجات أو شراء المنتجات التي فزت بها.</p>
+                            <ul class="transaction-list">
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">إضافة رصيد</div>
+                                        <div class="transaction-date">٢٥ ديسمبر ٢٠٢٣</div>
+                                    </div>
+                                    <div class="transaction-amount amount-positive">+ ٥,٠٠٠ ريال</div>
+                                </li>
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">مزايدة على لابتوب</div>
+                                        <div class="transaction-date">٢٣ ديسمبر ٢٠٢٣</div>
+                                    </div>
+                                    <div class="transaction-amount amount-negative">- ٤,٨٠٠ ريال</div>
+                                </li>
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">مزايدة على ساعة ذكية</div>
+                                        <div class="transaction-date">٢٠ ديسمبر ٢٠٢٣</div>
+                                    </div>
+                                    <div class="transaction-amount amount-negative">- ١,٥٠٠ ريال</div>
+                                </li>
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">استرداد مبلغ مزايدة</div>
+                                        <div class="transaction-date">١٥ ديسمبر ٢٠٢٣</div>
+                                    </div>
+                                    <div class="transaction-amount amount-positive">+ ٢,٨٠٠ ريال</div>
+                                </li>
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">إضافة رصيد</div>
+                                        <div class="transaction-date">١٠ ديسمبر ٢٠٢٣</div>
+                                    </div>
+                                    <div class="transaction-amount amount-positive">+ ١٠,٠٠٠ ريال</div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="empty-state" style="display:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
+                                <path fill="#e0e0e0" d="M19.965 8.521C19.988 8.347 20 8.173 20 8c0-2.21-1.79-4-4-4-1.11 0-2.08.43-2.815 1.07C12.797 3.797 11.486 3 10 3 7.79 3 6 4.79 6 7c0 .37.064.722.17 1.058C4.33 8.859 3 10.719 3 13c0 3.06 2.31 5.558 5.25 5.943V19h7.5v-.057C18.71 18.557 21 16.062 21 13c0-1.79-.97-3.361-2.35-4.214"></path>
+                                <path fill="#bdbdbd" d="M9 16H7v-2h2v2zm8-2h-2v2h2v-2zm-4-8c-1.1 0-2 .9-2 2v.55c-.59.34-1 .98-1 1.72V10l-2-3V3h6v4l-2 3z"></path>
+                            </svg>
+                            <h3>لا توجد معاملات حتى الآن</h3>
+                            <p>تظهر هنا جميع معاملاتك المالية، بما في ذلك المزايدات والمشتريات وإضافات الرصيد.</p>
+                            <a href="#" class="btn btn-primary">إضافة رصيد للبدء</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Settings Tab -->
+                    <div class="profile-tab-pane" id="settings-tab">
+                        <form id="profile-settings-form">
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label for="name">الاسم</label>
+                                    <input type="text" id="name" class="form-control" value="أحمد محمد">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">البريد الإلكتروني</label>
+                                    <input type="email" id="email" class="form-control" value="ahmed@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">رقم الجوال</label>
+                                    <input type="tel" id="phone" class="form-control" value="0555555555">
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">المدينة</label>
+                                    <input type="text" id="location" class="form-control" value="الرياض">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="address">العنوان</label>
+                                    <input type="text" id="address" class="form-control" value="حي الياسمين، شارع الملك عبدالله">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">كلمة المرور الجديدة</label>
+                                    <input type="password" id="new-password" class="form-control" placeholder="اتركه فارغاً إذا لم تريد تغييره">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">تأكيد كلمة المرور</label>
+                                    <input type="password" id="confirm-password" class="form-control" placeholder="تأكيد كلمة المرور الجديدة">
+                                </div>
+                            </div>
+                            
+                            <div class="notification-settings">
+                                <h3>إعدادات الإشعارات</h3>
+                                <div class="notification-option">
+                                    <div class="notification-details">
+                                        <div class="notification-title">إشعارات المزايدات</div>
+                                        <div class="notification-description">إشعارات عندما يتم تجاوز مزايداتك</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="bid-notifications" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="notification-details">
+                                        <div class="notification-title">إشعارات المزادات الجديدة</div>
+                                        <div class="notification-description">إشعارات عند إضافة مزادات جديدة تناسب اهتماماتك</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="new-auction-notifications" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="notification-details">
+                                        <div class="notification-title">إشعارات نهاية المزاد</div>
+                                        <div class="notification-description">إشعارات قبل انتهاء المزادات التي تشارك فيها</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="end-auction-notifications" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="notification-option">
+                                    <div class="notification-details">
+                                        <div class="notification-title">الرسائل الإخبارية</div>
+                                        <div class="notification-description">العروض والأخبار والفعاليات الخاصة</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="newsletter-notifications">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="save-settings">
+                                <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>ابق على اطلاع بأحدث المزادات</h2>
+                <p>اشترك في نشرتنا البريدية للحصول على إشعارات بالمزادات الجديدة والعروض الحصرية</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit" class="btn btn-primary">اشتراك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>مزادات<span>أونلاين</span></h2>
+                    </div>
+                    <p>منصة إلكترونية متخصصة في المزادات عبر الإنترنت، نقدم تجربة تسوق مختلفة وفرصة للحصول على منتجات بأسعار تنافسية.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="#">المزادات الحالية</a></li>
+                        <li><a href="#">المزادات القادمة</a></li>
+                        <li><a href="#">كيفية المشاركة</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>فئات المزادات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الإلكترونيات</a></li>
+                        <li><a href="#">السيارات</a></li>
+                        <li><a href="#">العقارات</a></li>
+                        <li><a href="#">المجوهرات والساعات</a></li>
+                        <li><a href="#">التحف والمقتنيات النادرة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li><i class="fas fa-phone"></i> +966 12 345 6789</li>
+                        <li><i class="fas fa-envelope"></i> info@mazadat-online.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 مزادات أونلاين - جميع الحقوق محفوظة</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

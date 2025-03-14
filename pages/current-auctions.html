@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المزادات الحالية | موقع المزادات</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auctions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>مزادات<span>أونلاين</span></h1>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="pages/current-auctions.html" class="active">المزادات الحالية</a></li>
+                    <li><a href="../pages/upcoming-auctions.html">المزادات القادمة</a></li>
+                    <li><a href="../pages/how-to-participate.html">كيفية المشاركة</a></li>
+                    <li><a href="../pages/contact-us.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn btn-outline"><i class="fas fa-user"></i> تسجيل الدخول</a>
+                <a href="#" class="btn btn-primary"><i class="fas fa-user-plus"></i> إنشاء حساب</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="section-header center">
+                <h2>المزادات الحالية</h2>
+                <p>تصفح المزادات النشطة حالياً وشارك في المنافسة للفوز بأفضل العروض</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-filters">
+        <div class="container">
+            <div class="search-bar">
+                <form class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" placeholder="ابحث عن المزادات..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label>الفئة</label>
+                    <select class="filter-select">
+                        <option value="">جميع الفئات</option>
+                        <option value="electronics">الإلكترونيات</option>
+                        <option value="cars">السيارات</option>
+                        <option value="realestate">العقارات</option>
+                        <option value="jewelry">المجوهرات والساعات</option>
+                        <option value="furniture">الأثاث والديكور</option>
+                        <option value="fashion">الملابس والإكسسوارات</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>السعر</label>
+                    <div class="price-range">
+                        <input type="number" placeholder="من" class="filter-input">
+                        <span class="range-separator">-</span>
+                        <input type="number" placeholder="إلى" class="filter-input">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>ترتيب حسب</label>
+                    <select class="filter-select">
+                        <option value="ending-soon">ينتهي قريباً</option>
+                        <option value="newest">الأحدث</option>
+                        <option value="price-low">السعر: الأقل إلى الأعلى</option>
+                        <option value="price-high">السعر: الأعلى إلى الأقل</option>
+                        <option value="bids">عدد المزايدات</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary filter-btn">تطبيق الفلاتر</button>
+                <button class="btn btn-outline reset-btn">إعادة ضبط</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="auction-results">
+        <div class="container">
+            <div class="results-header">
+                <p class="results-count">عرض <span>24</span> من إجمالي <span>56</span> مزاد</p>
+                <div class="view-options">
+                    <button class="view-option grid-view active">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-option list-view">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="auctions-grid">
+                <div class="auction-card">
+                    <div class="auction-badge">ينتهي قريباً</div>
+                    <div class="auction-image">
+                        <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f9f9f9"/>
+                            <rect x="75" y="50" width="150" height="100" rx="5" fill="#ddd"/>
+                            <rect x="100" y="75" width="100" height="50" rx="2" fill="#ccc"/>
+                            <circle cx="125" cy="100" r="10" fill="#bbb"/>
+                        </svg>
+                    </div>
+                    <div class="auction-info">
+                        <h3>ساعة ذكية فاخرة - الإصدار الحديث</h3>
+                        <div class="auction-meta">
+                            <div class="current-bid">
+                                <span class="label">السعر الحالي:</span>
+                                <span class="value">١٥٠٠ ريال</span>
+                            </div>
+                            <div class="time-left">
+                                <i class="far fa-clock"></i>
+                                <span class="countdown" data-time="2023-12-31T23:59:59">٣٦:١٢:٠٥</span>
+                            </div>
+                        </div>
+                        <div class="auction-actions">
+                            <a href="auction-details.html" class="btn btn-primary btn-full">المزايدة الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auction-card">
+                    <div class="auction-badge hot">الأكثر طلباً</div>
+                    <div class="auction-image">
+                        <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f9f9f9"/>
+                            <rect x="50" y="40" width="200" height="120" rx="0" fill="#ddd"/>
+                            <rect x="70" y="60" width="160" height="80" rx="0" fill="#ccc"/>
+                            <path d="M120 100 L180 100" stroke="#bbb" stroke-width="8"/>
+                            <path d="M150 70 L150 130" stroke="#bbb" stroke-width="8"/>
+                        </svg>
+                    </div>
+                    <div class="auction-info">
+                        <h3>جهاز تلفزيون ذكي - ٦٥ بوصة</h3>
+                        <div class="auction-meta">
+                            <div class="current-bid">
+                                <span class="label">السعر الحالي:</span>
+                                <span class="value">٣٢٠٠ ريال</span>
+                            </div>
+                            <div class="time-left">
+                                <i class="far fa-clock"></i>
+                                <span class="countdown" data-time="2023-12-29T18:30:00">١٠:٢٥:٤٠</span>
+                            </div>
+                        </div>
+                        <div class="auction-actions">
+                            <a href="auction-details.html" class="btn btn-primary btn-full">المزايدة الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auction-card">
+                    <div class="auction-image">
+                        <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f9f9f9"/>
+                            <circle cx="150" cy="100" r="70" fill="#ddd"/>
+                            <circle cx="150" cy="100" r="50" fill="#ccc"/>
+                            <circle cx="150" cy="100" r="30" fill="#bbb"/>
+                        </svg>
+                    </div>
+                    <div class="auction-info">
+                        <h3>كاميرا احترافية مع عدسات</h3>
+                        <div class="auction-meta">
+                            <div class="current-bid">
+                                <span class="label">السعر الحالي:</span>
+                                <span class="value">٢٨٠٠ ريال</span>
+                            </div>
+                            <div class="time-left">
+                                <i class="far fa-clock"></i>
+                                <span class="countdown" data-time="2024-01-02T20:15:00">٢ أيام</span>
+                            </div>
+                        </div>
+                        <div class="auction-actions">
+                            <a href="auction-details.html" class="btn btn-primary btn-full">المزايدة الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auction-card">
+                    <div class="auction-badge">جديد</div>
+                    <div class="auction-image">
+                        <svg width="100%" height="180" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#f9f9f9"/>
+                            <path d="M75 150 L225 150 L200 100 L100 100 Z" fill="#ddd"/>
+                            <rect x="125" y="60" width="50" height="40" rx="5" fill="#ccc"/>
+                        </svg>
+                    </div>
+                    <div class="auction-info">
+                        <h3>طقم أثاث منزلي فاخر</h3>
+                        <div class="auction-meta">
+                            <div class="current-bid">
+                                <span class="label">السعر الحالي:</span>
+                                <span class="value">٥٥٠٠ ريال</span>
+                            </div>
+                            <div class="time-left">
+                                <i class="far fa-clock"></i>
+                                <span class="countdown" data-time="2024-01-07T15:30:00">٥ أيام</span>
+                            </div>
+                        </div>
+                        <div class="auction-actions">
+                            <a href="auction-details.html" class="btn btn-primary btn-full">المزايدة الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More cards would go here -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-prev"><i class="fas fa-chevron-right"></i></a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <a href="#" class="page-number">4</a>
+                <span class="page-dots">...</span>
+                <a href="#" class="page-number">10</a>
+                <a href="#" class="page-next"><i class="fas fa-chevron-left"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>ابق على اطلاع بأحدث المزادات</h2>
+                <p>اشترك في نشرتنا البريدية للحصول على إشعارات بالمزادات الجديدة والعروض الحصرية</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit" class="btn btn-primary">اشتراك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>مزادات<span>أونلاين</span></h2>
+                    </div>
+                    <p>منصة إلكترونية متخصصة في المزادات عبر الإنترنت، نقدم تجربة تسوق مختلفة وفرصة للحصول على منتجات بأسعار تنافسية.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="current-auctions.html">المزادات الحالية</a></li>
+                        <li><a href="upcoming-auctions.html">المزادات القادمة</a></li>
+                        <li><a href="how-to-participate.html">كيفية المشاركة</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>فئات المزادات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الإلكترونيات</a></li>
+                        <li><a href="#">السيارات</a></li>
+                        <li><a href="#">العقارات</a></li>
+                        <li><a href="#">المجوهرات والساعات</a></li>
+                        <li><a href="#">التحف والمقتنيات النادرة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li><i class="fas fa-phone"></i> +966 12 345 6789</li>
+                        <li><i class="fas fa-envelope"></i> info@mazadat-online.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 مزادات أونلاين - جميع الحقوق محفوظة</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auctions.js"></script>
+</body>
+</html>

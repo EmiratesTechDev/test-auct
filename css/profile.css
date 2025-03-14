@@ -1,0 +1,478 @@
+/* User Profile Styles */
+.profile-section {
+    padding: 40px 0;
+    background-color: #fafafa;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--light-bg);
+    border: 3px solid var(--primary-color);
+}
+
+.profile-avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-details h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.profile-meta {
+    color: var(--text-light);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.profile-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.profile-meta i {
+    margin-left: 5px;
+    color: var(--primary-color);
+}
+
+.profile-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+    padding: 0 15px;
+}
+
+.stat-item:last-child {
+    border-left: none;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-tabs {
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabs-header {
+    display: flex;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-tab-btn {
+    padding: 14px 20px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-light);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 13px;
+    position: relative;
+    transition: var(--transition);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.profile-tab-btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.profile-tab-btn.active {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+.profile-tab-btn.active:after {
+    width: 100%;
+}
+
+.profile-tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.profile-tab-content {
+    padding: 0;
+}
+
+.profile-tab-pane {
+    display: none;
+    padding: 20px;
+}
+
+.profile-tab-pane.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.my-auctions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.auction-status-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.status-winning {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #27ae60;
+}
+
+.status-outbid {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+}
+
+.status-watching {
+    background-color: rgba(52, 152, 219, 0.15);
+    color: #3498db;
+}
+
+.bid-amount-indicator {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bid-amount-indicator .your-bid {
+    color: var(--primary-color);
+}
+
+.account-balance {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.balance-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.balance-header h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.balance-amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.transaction-list {
+    list-style: none;
+    margin-top: 15px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 13px;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-title {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.transaction-date {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.transaction-amount {
+    font-weight: 600;
+}
+
+.amount-positive {
+    color: #27ae60;
+}
+
+.amount-negative {
+    color: #e74c3c;
+}
+
+.settings-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.notification-settings {
+    margin-top: 25px;
+}
+
+.notification-settings h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.notification-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notification-option:last-child {
+    border-bottom: none;
+}
+
+.notification-details {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.notification-description {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    right: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(-24px);
+}
+
+.save-settings {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-state svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.empty-state p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-info {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .profile-stats {
+        margin-bottom: 20px;
+    }
+    
+    .settings-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs-header {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .profile-details h1 {
+        font-size: 18px;
+    }
+    
+    .profile-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat-item {
+        min-width: 80px;
+        margin-bottom: 10px;
+    }
+}
