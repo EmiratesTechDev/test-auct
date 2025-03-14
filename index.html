@@ -90,6 +90,15 @@
                         </div>
                     </div>
                 </div>
+                <!--
+                //يرجى إختيار طريقة إنقاال الصفحتين سواءاً بشكل مبار من ملف إتش تي أم أل أو عن طريق ملف الجافاسكريبت .. (يوصى الطريقة الهجينة )
+                const auctionButtons = document.querySelectorAll('.auction-actions .btn-primary');
+                 auctionButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                     e.preventDefault();
+                     window.location.href = 'pages/auction-details.html';
+        });
+    });-->
 
                 <div class="auction-card">
                     <div class="auction-badge hot">الأكثر طلباً</div>
